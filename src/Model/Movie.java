@@ -18,4 +18,15 @@ public class Movie {
         return movieId;
     }
 
+    public String getMovieName() {
+        return movieName;
+    }
+
+    public int getMoviePrice() {
+        return moviePrice;
+    }
+
+    public String getMovieClass() {
+        return movieClass;
+    }
 }
