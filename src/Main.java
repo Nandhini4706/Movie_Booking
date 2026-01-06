@@ -34,7 +34,6 @@ public class Main{
                         count++;
                     }
 
-
                     System.out.print("Enter Id: ");
                     int n1=sc.nextInt();
                     Movie select=map.get(n1);
@@ -42,13 +41,17 @@ public class Main{
                         System.out.println("Invalid Movie ID");
                         break;
                     }
+                    System.out.println("Enter How Many Tickets: ");
+                    int num=sc.nextInt();
+                    for(int i=1; i<=num; i++) {
                     Ticket ticket=service.bookTicket(user,select,"AGS Cinemas");
-                    int id=1;
-                    if(ticket !=null){
-                        System.out.println("\uD83C\uDF89 Ticket Booked Successfully!!!");
-                        System.out.println("Ticket Id: " + ticket.getTicketId());
-                        System.out.println("Final Price: " +ticket.getFinalPrice());
 
+                        if (ticket != null) {
+                            System.out.println("\uD83C\uDF89 Ticket " +i +" Booked Successfully!!!");
+                            System.out.println("Ticket Id: " + ticket.getMovie().getMovieId());
+                            System.out.println("Final Price: " + ticket.getFinalPrice());
+                            System.out.println("---------------------------------------");
+                        }
                     }
                     break;
                 case 2:
