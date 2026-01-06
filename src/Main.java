@@ -34,6 +34,7 @@ public class Main{
                         count++;
                     }
 
+
                     System.out.print("Enter Id: ");
                     int n1=sc.nextInt();
                     Movie select=map.get(n1);
@@ -50,6 +51,14 @@ public class Main{
 
                     }
                     break;
+                case 2:
+                    service.viewTickets();
+                    break;
+                case 3:
+                    System.out.println("Thank You! Visit again \uD83D\uDE0A");
+                    return;
+                default:
+                    System.out.println("Invalid choice... Try again...");
             }
         }
     }
