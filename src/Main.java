@@ -43,16 +43,19 @@ public class Main{
                     }
                     System.out.println("Enter How Many Tickets: ");
                     int num=sc.nextInt();
+                    int total=0;
                     for(int i=1; i<=num; i++) {
                     Ticket ticket=service.bookTicket(user,select,"AGS Cinemas");
 
                         if (ticket != null) {
+                            total =total + ticket.getFinalPrice();
                             System.out.println("\uD83C\uDF89 Ticket " +i +" Booked Successfully!!!");
                             System.out.println("Ticket Id: " + ticket.getMovie().getMovieId());
                             System.out.println("Final Price: " + ticket.getFinalPrice());
                             System.out.println("---------------------------------------");
                         }
                     }
+                    System.out.println("Total Amount ₹ " +total);
                     break;
                 case 2:
                     service.viewTickets();
