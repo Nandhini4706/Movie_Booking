@@ -63,7 +63,7 @@ public class Main{
                     break;
                 case 3:
                     System.out.println("Thank You! Visit again \uD83D\uDE0A");
-                    System.out.print("--------------------Developed By Nandhini M--------------------");
+                    System.out.print("---------------------Developed By Nandhini M---------------------");
                     return;
                 default:
                     System.out.println("Invalid choice... Try again...");
