@@ -50,9 +50,10 @@ public class Main{
                         if (ticket != null) {
                             total =total + ticket.getFinalPrice();
                             System.out.println("\uD83C\uDF89 Ticket " +i +" Booked Successfully!!!");
-                            System.out.println("Ticket Id: " + ticket.getMovie().getMovieId());
-                            System.out.println("Final Price: " + ticket.getFinalPrice());
-                            System.out.println("---------------------------------------");
+                            System.out.println("            --------------------------------            ");
+                            System.out.println("            "+"|      Ticket Id: " + ticket.getMovie().getMovieId()+"          |");
+                            System.out.println("            "+"|      Final Price: " + ticket.getFinalPrice()+"        |");
+                            System.out.println("            --------------------------------            ");
                         }
                     }
                     System.out.println("Total Amount ₹ " +total);
@@ -62,6 +63,7 @@ public class Main{
                     break;
                 case 3:
                     System.out.println("Thank You! Visit again \uD83D\uDE0A");
+                    System.out.print("--------------------Developed By Nandhini M--------------------");
                     return;
                 default:
                     System.out.println("Invalid choice... Try again...");
