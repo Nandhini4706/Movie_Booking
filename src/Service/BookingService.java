@@ -33,11 +33,12 @@ public class BookingService {
                    return;
                }
                for(Ticket t:tickets){
-                   System.out.println("Customer: " +t.getUser().getUserName());
-                   System.out.println("Movie: " +t.getMovie().getMovieName());
-                   System.out.println("Theatre: " +t.getTheatre());
-                   System.out.println("Price: " +t.getFinalPrice());
-                   System.out.println("---------------------------------------");
+                   System.out.println("        ----------------------------------------                ");
+                   System.out.println("        | "+"Customer: " +t.getUser().getUserName() +"                   |");
+                   System.out.println("        | "+"Movie: "+t.getMovie().getMovieName()+"                  |");
+                   System.out.println("        | "+"Theatre: " +t.getTheatre()+"                 |");
+                   System.out.println("        | "+"Price: " +t.getFinalPrice()+"                           |");
+                   System.out.println("        ----------------------------------------                ");
 
                }
         }
