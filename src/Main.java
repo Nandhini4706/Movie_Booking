@@ -34,7 +34,7 @@ public class Main{
                         count++;
                     }
 
-                    System.out.print("Enter Id: ");
+                    System.out.print("Enter Choice: ");
                     int n1=sc.nextInt();
                     Movie select=map.get(n1);
                     if(select==null){
