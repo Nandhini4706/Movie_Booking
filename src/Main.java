@@ -92,13 +92,35 @@ public class Main{
                     System.out.println("How many seats Do you Want: ");
                     int d1=sc.nextInt();
                     System.out.println("Enter Seat Number: ");
-
-                    for(int i=0; i<d1; i++){
+                    int s1[]=new int[11];
+                    for(int i=1; i<=d1; i++){
                         int d=sc.nextInt();
+                        s1[i]=d;
                     }
 
                     System.out.println("Loading.....");
                     System.out.println("Successfully Booked \uD83C\uDF89");
+                    int seats=1;
+                    for(int i=1; i<=10; i++){
+                        for(int j=1; j<=10; j++){
+                            if(j<9){
+                                // System.out.print("--");
+                                if(seats==s1[j]) {
+                                    System.out.print("| 0 | ");
+
+                                    //  System.out.println("--");
+                                }else{
+                                    System.out.print("| " + seats + " | ");
+                                }
+                            }else {
+                                // System.out.print("----");
+                                System.out.print("| "+seats + " | ");
+                                // System.out.print("----");
+                            }
+                            seats++;
+                        }
+                        System.out.println();
+                    }
                     break;
                 case 4:
                     System.out.println("Thank You! Visit again \uD83D\uDE0A");
