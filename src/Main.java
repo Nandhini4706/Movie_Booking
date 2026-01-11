@@ -22,7 +22,8 @@ public class Main{
             System.out.println("\n-------------Movie Ticket Booking---------------");
             System.out.println("1. Book Ticket");
             System.out.println("2. View Tickets");
-            System.out.println("3. Exit");
+            System.out.println("3. view seats");
+            System.out.println("4. Exit");
             System.out.println("Enter Choice: ");
             int n=sc.nextInt();
             switch(n){
@@ -62,8 +63,46 @@ public class Main{
                     service.viewTickets();
                     break;
                 case 3:
+                    System.out.println("----------------------------------------------------------------------------------");
+                    System.out.println("|                                                                                |");
+                    System.out.println("|                                                                                |");
+                    System.out.println("|                                                                                |");
+                    System.out.println("|                           ALL EYES SEE HERE                                    |");
+                    System.out.println("|                                                                                |");
+                    System.out.println("|                                                                                |");
+                    System.out.println("|                                                                                |");
+                    System.out.println("----------------------------------------------------------------------------------");
+                    char ch[][]=new char[10][10];
+                    int seat=1;
+                    for(int i=1; i<=10; i++){
+                        for(int j=1; j<=10; j++){
+                            if(j<9){
+                               // System.out.print("--");
+                                System.out.print("| "+seat+" | ");
+                              //  System.out.println("--");
+                            }else {
+                               // System.out.print("----");
+                                System.out.print("| "+seat + " | ");
+                               // System.out.print("----");
+                            }
+                            seat++;
+                        }
+                        System.out.println();
+                    }
+                    System.out.println("How many seats Do you Want: ");
+                    int d1=sc.nextInt();
+                    System.out.println("Enter Seat Number: ");
+
+                    for(int i=0; i<d1; i++){
+                        int d=sc.nextInt();
+                    }
+
+                    System.out.println("Loading.....");
+                    System.out.println("Successfully Booked \uD83C\uDF89");
+                    break;
+                case 4:
                     System.out.println("Thank You! Visit again \uD83D\uDE0A");
-                    System.out.print("---------------------Developed By Nandhini M---------------------");
+                    System.out.print("---------------------Developed By ❤ Nandhini M---------------------");
                     return;
                 default:
                     System.out.println("Invalid choice... Try again...");
