@@ -117,7 +117,7 @@ public class Main{
                             }
                             if(boo) {
                                 // System.out.print("----");
-                                System.out.print("| 0 |");
+                                System.out.print("| X |");
                             }else{
                                 System.out.print("| "+seats + " | ");
                                 // System.out.print("----");
