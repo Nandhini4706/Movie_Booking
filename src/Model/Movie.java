@@ -5,12 +5,13 @@ public class Movie {
     private String movieName;
     private int moviePrice;
     private String movieClass;
-
-    public Movie(int movieId,String movieName, int moviePrice, String movieClass){
+    private int ticketCount;
+    public Movie(int movieId,String movieName, int moviePrice, String movieClass, int ticketCount){
         this.movieId=movieId;
         this.movieName=movieName;
         this.movieClass=movieClass;
         this.moviePrice=moviePrice;
+        this.ticketCount=ticketCount;
     }
 
     public int getMovieId(){
@@ -29,4 +30,9 @@ public class Movie {
     public String getMovieClass() {
         return movieClass;
     }
+
+    public int getTicketCount() {
+        return ticketCount;
+    }
+
 }

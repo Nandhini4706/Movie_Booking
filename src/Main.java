@@ -8,12 +8,12 @@ public class Main{
         Scanner sc=new Scanner(System.in);
         HashMap<Integer, Movie> map=new LinkedHashMap<>();
         BookingService service=new BookingService();
-        map.put(1,new Movie(101,"Jana Nayagan",300,"First Class"));
-        map.put(2,new Movie(102,"Jana Nayagan",250,"Second Class"));
-        map.put(3,new Movie(103,"Jana Nayagan",150,"Third Class"));
-        map.put(4,new Movie(111,"ParaSakthi",300,"First Class"));
-        map.put(5,new Movie(112,"ParaSakthi",250,"Second Class"));
-        map.put(6,new Movie(113,"ParaSakthi",150,"Third Class"));
+        map.put(1,new Movie(101,"Jana Nayagan",300,"First Class",10));
+        map.put(2,new Movie(102,"Jana Nayagan",250,"Second Class",10));
+        map.put(3,new Movie(103,"Jana Nayagan",150,"Third Class",10));
+        map.put(4,new Movie(111,"ParaSakthi",300,"First Class",10));
+        map.put(5,new Movie(112,"ParaSakthi",250,"Second Class",10));
+        map.put(6,new Movie(113,"ParaSakthi",150,"Third Class",10));
 
         System.out.println("Enter Your Name: ");
         String name=sc.nextLine();
@@ -76,7 +76,7 @@ public class Main{
                     System.out.println("|                                                                                |");
                     System.out.println("|                                                                                |");
                     System.out.println("----------------------------------------------------------------------------------");
-                    char ch[][]=new char[10][10];
+                  //  char ch[][]=new char[10][10];
                     int seat=1;
                     for(int i=1; i<=10; i++){
                         for(int j=1; j<=10; j++){
@@ -84,7 +84,7 @@ public class Main{
                                // System.out.print("--");
                                 System.out.print("| "+seat+" | ");
                               //  System.out.println("--");
-                            }else  {
+                            }else{
                                // System.out.print("----");
                                 System.out.print("| "+seat + " | ");
                                // System.out.print("----");
@@ -97,12 +97,10 @@ public class Main{
                     int d1=sc.nextInt();
 
                     System.out.println("Enter Seat Number: ");
-                    int s1[]=new int[10]; int index=1;
-                    for(int i=1; i<=d1; i++) {
+                    int s1[]=new int[d1]; //int index=1;
+                    for(int i=0; i<d1; i++) {
                       //  for (int j = 1; j <= d1; j++) {
-
-                            int d = sc.nextInt();
-                            s1[i] = d;
+                        s1[i]=sc.nextInt();
                       //  }
                     }
                     System.out.println("Loading.....");
@@ -110,20 +108,17 @@ public class Main{
                     int seats=1;
                     for(int i=1; i<=10; i++){
                         for(int j=1; j<=10; j++){
-                            if(j<9){
-                                // System.out.print("--");
-
-                                    if (seats == s1[j]) {
-
-                                            System.out.print("| 0 | ");
-
-                                        //  System.out.println("--");
-                                    }
-                                 else if(seats!=s1[j]){
-                                    System.out.print("|  " + seats + "  | ");
+                            boolean boo=false;
+                            for(int k=0; k<d1; k++) {
+                                if (seats==s1[k]) {
+                                   boo=true;
+                                   break;
                                 }
-                            }else {
+                            }
+                            if(boo) {
                                 // System.out.print("----");
+                                System.out.print("| 0 |");
+                            }else{
                                 System.out.print("| "+seats + " | ");
                                 // System.out.print("----");
                             }
