@@ -84,7 +84,7 @@ public class Main{
                                // System.out.print("--");
                                 System.out.print("| "+seat+" | ");
                               //  System.out.println("--");
-                            }else {
+                            }else  {
                                // System.out.print("----");
                                 System.out.print("| "+seat + " | ");
                                // System.out.print("----");
