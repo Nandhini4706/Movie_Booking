@@ -67,7 +67,11 @@ public class Main{
                     System.out.println("|                                                                                |");
                     System.out.println("|                                                                                |");
                     System.out.println("|                                                                                |");
+                    System.out.println("|                                                                                |");
+                    System.out.println("|                                                                                |");
                     System.out.println("|                           ALL EYES SEE HERE                                    |");
+                    System.out.println("|                                                                                |");
+                    System.out.println("|                                                                                |");
                     System.out.println("|                                                                                |");
                     System.out.println("|                                                                                |");
                     System.out.println("|                                                                                |");
@@ -91,13 +95,16 @@ public class Main{
                     }
                     System.out.println("How many seats Do you Want: ");
                     int d1=sc.nextInt();
-                    System.out.println("Enter Seat Number: ");
-                    int s1[]=new int[11];
-                    for(int i=1; i<=d1; i++){
-                        int d=sc.nextInt();
-                        s1[i]=d;
-                    }
 
+                    System.out.println("Enter Seat Number: ");
+                    int s1[]=new int[10]; int index=1;
+                    for(int i=1; i<=d1; i++) {
+                      //  for (int j = 1; j <= d1; j++) {
+
+                            int d = sc.nextInt();
+                            s1[i] = d;
+                      //  }
+                    }
                     System.out.println("Loading.....");
                     System.out.println("Successfully Booked \uD83C\uDF89");
                     int seats=1;
@@ -105,12 +112,15 @@ public class Main{
                         for(int j=1; j<=10; j++){
                             if(j<9){
                                 // System.out.print("--");
-                                if(seats==s1[j]) {
-                                    System.out.print("| 0 | ");
 
-                                    //  System.out.println("--");
-                                }else{
-                                    System.out.print("| " + seats + " | ");
+                                    if (seats == s1[j]) {
+
+                                            System.out.print("| 0 | ");
+
+                                        //  System.out.println("--");
+                                    }
+                                 else if(seats!=s1[j]){
+                                    System.out.print("|  " + seats + "  | ");
                                 }
                             }else {
                                 // System.out.print("----");
