@@ -17,7 +17,7 @@ public class Main{
 
         System.out.println("Enter Your Name: ");
         String name=sc.nextLine();
-        User user=new User(1,name);
+        User user=new User(1, name);
         while(true){
             System.out.println("\n-------------Movie Ticket Booking---------------");
             System.out.println("1. Book Ticket");
