@@ -31,7 +31,7 @@ public class Main{
                     int count=1;
                     System.out.println("\n--------Available Movies: --------");
                     for(Movie m:map.values()) {
-                        System.out.println(count +"." +m.getMovieId() +"->" +m.getMovieName() +"->" +m.getMoviePrice() +"->" +m.getMovieClass());
+                        System.out.println(count +"." +m.getMovieId() +"->" +m.getMovieName() +"->" +m.getMoviePrice() +"->" +m.getMovieClass() +"->" +m.getTicketCount());
                         count++;
                     }
 
@@ -44,6 +44,16 @@ public class Main{
                     }
                     System.out.println("Enter How Many Tickets: ");
                     int num=sc.nextInt();
+                    System.out.println("Enter seat number: ");
+//                    int d2=sc.nextInt();
+//                   int s2[]=new int[d2];
+//               for(int i=0; i<d2; i++) {
+//                        s2[i]=sc.nextInt();
+//                   }
+
+                   System.out.println("Loading...");
+                   System.out.println("\uD83C\uDF89 Seats Available");
+
                     int total=0;
                     for(int i=1; i<=num; i++) {
                     Ticket ticket=service.bookTicket(user,select,"AGS Cinemas");
@@ -54,6 +64,9 @@ public class Main{
                             System.out.println("            --------------------------------            ");
                             System.out.println("            "+"|      Ticket Id: " + ticket.getMovie().getMovieId()+"          |");
                             System.out.println("            "+"|      Final Price: " + ticket.getFinalPrice()+"        |");
+//                            for(int t=0; t<d2; t++) {
+//                                System.out.println("            " + "|      Seats No    : " + s2[t]        + "         |");
+//                            }
                             System.out.println("            --------------------------------            ");
                         }
                     }
@@ -63,6 +76,13 @@ public class Main{
                     service.viewTickets();
                     break;
                 case 3:
+                    System.out.println("----------------------------------------------------------------------------------");
+                    System.out.println("|                                                                                |");
+                    System.out.println("|                                 AGS Cinemas                                    |");
+                    System.out.println("|                                                                                |");
+                    System.out.println("__________________________________________________________________________________");
+                    System.out.println();
+                    System.out.println();
                     System.out.println("----------------------------------------------------------------------------------");
                     System.out.println("|                                                                                |");
                     System.out.println("|                                                                                |");
@@ -98,10 +118,9 @@ public class Main{
 
                     System.out.println("Enter Seat Number: ");
                     int s1[]=new int[d1]; //int index=1;
-                    for(int i=0; i<d1; i++) {
-                      //  for (int j = 1; j <= d1; j++) {
-                        s1[i]=sc.nextInt();
-                      //  }
+                   for(int i=0; i<d1; i++) {
+                      s1[i]=sc.nextInt();
+
                     }
                     System.out.println("Loading.....");
                     System.out.println("Successfully Booked \uD83C\uDF89");
